@@ -249,7 +249,7 @@ function createEdgePaths(selection, g, arrows) {
 
       var domEdge = d3.select(this)
         .attr("marker-end", function() {
-          return "url(" + makeFragmentRef(location.href, edge.arrowheadId) + ")";
+          return "url(#" + edge.arrowheadId + ")";
         })
         .style("fill", "none");
 
@@ -268,11 +268,6 @@ function createEdgePaths(selection, g, arrows) {
     });
 
   return svgPaths;
-}
-
-function makeFragmentRef(url, fragmentId) {
-  var baseUrl = url.split("#")[0];
-  return baseUrl + "#" + fragmentId;
 }
 
 function calcPoints(g, e) {
@@ -425,6 +420,7 @@ if (!d3) {
 module.exports = d3;
 
 },{"d3":undefined}],8:[function(require,module,exports){
+// eslint-disable-next-line no-redeclare
 /* global window */
 
 var dagre;
@@ -444,6 +440,7 @@ if (!dagre) {
 module.exports = dagre;
 
 },{"dagre":undefined}],9:[function(require,module,exports){
+// eslint-disable-next-line no-redeclare
 /* global window */
 
 var graphlib;
@@ -821,6 +818,7 @@ function processEscapeSequences(text) {
 }
 
 },{"../util":27}],21:[function(require,module,exports){
+// eslint-disable-next-line no-redeclare
 /* global window */
 
 var lodash;
@@ -1241,7 +1239,7 @@ function applyTransition(selection, g) {
 }
 
 },{"./lodash":21}],28:[function(require,module,exports){
-module.exports = "0.6.4";
+module.exports = "0.6.5-pre";
 
 },{}]},{},[1])(1)
 });
